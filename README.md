@@ -132,6 +132,19 @@ Esto crea un directorio llamado "grit", inicializa un directorio .git en su inte
 $ git clone https://github.com/mrdavidlaing/javascript-koans.git js-koans
 ```
 
+### Guardando cambios en el repositorio
+
+Tienes un repositorio Git completo, y una copia de trabajo de los archivos de ese proyecto. Necesitas hacer algunos cambios, y confirmar instantáneas de esos cambios a tu repositorio cada vez que el proyecto alcance un estado que desees grabar.
+
+Recuerda que cada archivo de tu directorio de trabajo puede estar en uno de estos dos estados: bajo seguimiento (tracked), o sin seguimiento (untracked). Los archivos bajo seguimiento son aquellos que existían en la última instantánea; pueden estar sin modificaciones, modificados, o preparados. Los archivos sin seguimiento son todos los demás —cualquier archivo de tu directorio que no estuviese en tu última instantánea ni está en tu área de preparación—. La primera vez que clonas un repositorio, todos tus archivos estarán bajo seguimiento y sin modificaciones, ya que los acabas de copiar y no has modificado nada[6].
+
+![](https://git-scm.com/figures/18333fig0201-tn.png)
+
+#### Comprobando el estado de tus archivos
+
+Tu principal herramienta para determinar qué archivos están en qué estado es el comando _git status_. Crea un archivo que contenga un _hola mundo_ en Javascript y luego revisa el estado de los archivos:
+
+
 
 ## References
 
@@ -140,5 +153,7 @@ $ git clone https://github.com/mrdavidlaing/javascript-koans.git js-koans
 3. [Configurando Git](https://git-scm.com/book/es/v1/Empezando-Configurando-Git-por-primera-vez)
 4. [Obtener ayuda de Git](https://git-scm.com/book/es/v1/Empezando-Obteniendo-ayuda)
 5. [Obteniendo un repositorio](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Obteniendo-un-repositorio-Git)
+6. [Guardando cambios](https://git-scm.com/book/es/v1/Fundamentos-de-Git-Guardando-cambios-en-el-repositorio)
+7. 
 
 
