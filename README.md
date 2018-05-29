@@ -114,7 +114,7 @@ $ git commit -m "Versión inicial del proyecto"
 
 Para subir los cambios al repositorio remoto solo basta ejecutar la siguiente instrucción:
 
-```
+``` bash
 $ git push origin master
 ```
 
@@ -142,7 +142,68 @@ Recuerda que cada archivo de tu directorio de trabajo puede estar en uno de esto
 
 #### Comprobando el estado de tus archivos
 
-Tu principal herramienta para determinar qué archivos están en qué estado es el comando _git status_. Crea un archivo que contenga un _hola mundo_ en Javascript y luego revisa el estado de los archivos:
+Tu principal herramienta para determinar qué archivos están en qué estado es el comando _git status_. Primero verificaremos el estado del repositorio:
+
+```
+$ git status
+// la salida será algo muy parecido a lo que sigue
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+```
+
+Crea un archivo que contenga un _hola mundo_ en Javascript y luego revisa el estado de los archivos.
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>El primer script</title>
+        <script type="text/javascript">
+            alert("Hola Mundo!");
+        </script>
+    </head>
+ 
+    <body>
+        <p>Esta página contiene el primer script</p>
+    </body>
+</html>
+```
+
+```bash
+$ git status
+En la rama master
+Archivos sin seguimiento:
+  (usa "git add <archivo>..." para incluirlo a lo que se será confirmado)
+
+	hola.html
+
+no hay nada agregado al commit pero hay archivos sin seguimiento presentes (usa "git add" para hacerles seguimiento)
+```
+
+Ahora vamos a darle seguimiento con los comandos _git add_ y _git commit_:
+
+``` bash
+$ git add hola.html
+$ git status
+En la rama master
+Cambios a ser confirmados:
+  (usa "git reset HEAD <archivo>..." para sacar del área de stage)
+
+	nuevo archivo:  hola.html
+$ git commit -m "Hola mundo en Javascript agregado"
+[master d48e617] Hola mundo en Javascript agregado
+ 1 file changed, 14 insertions(+)
+ create mode 100644 hola.html
+$ git status
+En la rama master
+nada para hacer commit, el árbol de trabajo esta limpio
+```
+
+
+
+
+
+
 
 
 
